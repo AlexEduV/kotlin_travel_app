@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.sp
 import com.example.composecourse.composeui.BackButton
 import com.example.composecourse.composeui.CardSubtitle
 import com.example.composecourse.composeui.HostCard
+import com.example.composecourse.composeui.SearchSelector
 
 class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,25 +98,7 @@ class HomeActivity : ComponentActivity() {
                             )
                         }
 
-                        //search selector here
-                        Row(modifier = Modifier
-                            .background(
-                                color = Color.White.copy(alpha = 0.8f),
-                                shape = RoundedCornerShape(64.dp)
-                            )
-                            .fillMaxWidth()
-                            .height(60.dp)
-                        ) {
-
-                            DropdownMenu(
-                                expanded = false,
-                                onDismissRequest = { /*TODO*/ }
-                            ) {
-
-                            }
-
-                        }
-
+                        SearchSelector()
 
                     }
 
