@@ -4,16 +4,21 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocationOn
+import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
@@ -81,19 +86,35 @@ class HomeActivity : ComponentActivity() {
                             Icon(
                                 imageVector = Icons.Filled.LocationOn,
                                 contentDescription = "location marker",
-                                tint = Color.White,
+                                tint = Color.White.copy(alpha = 0.85f),
                                 modifier = Modifier.size(15.dp)
                             )
 
                             Text(
                                 "Mostar, Bosnia",
-                                color = Color.White,
+                                color = Color.White.copy(alpha = 0.85f),
                                 fontSize = 15.sp,
                             )
                         }
 
                         //search selector here
-                        
+                        Row(modifier = Modifier
+                            .background(
+                                color = Color.White.copy(alpha = 0.8f),
+                                shape = RoundedCornerShape(64.dp)
+                            )
+                            .fillMaxWidth()
+                            .height(60.dp)
+                        ) {
+
+                            DropdownMenu(
+                                expanded = false,
+                                onDismissRequest = { /*TODO*/ }
+                            ) {
+
+                            }
+
+                        }
 
 
                     }
