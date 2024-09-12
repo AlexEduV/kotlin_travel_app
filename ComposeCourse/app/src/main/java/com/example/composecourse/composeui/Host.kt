@@ -103,7 +103,7 @@ fun HostInfoColumn(
         Spacer(Modifier.height(2.dp))
 
         Text(
-            "$apartments Apartments  • Verified Host",
+            "$apartments Apartments",
             fontWeight = FontWeight.W400,
             lineHeight = 22.sp,
         )
