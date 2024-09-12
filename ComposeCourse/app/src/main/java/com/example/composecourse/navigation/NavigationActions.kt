@@ -6,6 +6,6 @@ fun NavController.navigateToProfileDetails() {
     navigate(Destinations.ProfileDetails.route)
 }
 
-fun NavController.navigateToApartmentDetails() {
-    navigate(Destinations.ApartmentDetails.route)
+fun NavController.navigateToApartmentDetails(resourceId: Int) {
+    navigate("${Destinations.ApartmentDetails.route}/$resourceId")
 }
