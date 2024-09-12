@@ -49,6 +49,7 @@ import com.example.composecourse.composeui.CardContent
 import com.example.composecourse.composeui.CardSubtitle
 import com.example.composecourse.composeui.CoverFlowRow
 import com.example.composecourse.composeui.CustomCard
+import com.example.composecourse.composeui.ProfileImage
 import com.example.composecourse.composeui.StatsElement
 
 class MainActivity : ComponentActivity() {
@@ -112,7 +113,7 @@ class MainActivity : ComponentActivity() {
                         Row {
 
                             Text(
-                                "Recent Stays • 8",
+                                "Recent Stays  •  8",
                                 fontWeight = FontWeight.W500,
                                 fontSize = 16.sp,
                                 color = Color.Gray,
@@ -123,14 +124,10 @@ class MainActivity : ComponentActivity() {
 
                     Spacer(modifier = Modifier.width(32.dp))
 
-                    Box(
-                        modifier = Modifier
-                            .size(50.dp)
-                            .clip(CircleShape)
-                            .background(Color.Gray.copy(alpha = 0.3f))
-                    ) {
-                        Image(painter = painterResource(id = R.drawable.profile_picture), contentDescription = "profile picture")
-                    }
+                    ProfileImage(
+                        size = 50.dp,
+                        resourceId = R.drawable.profile_picture,
+                    )
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
