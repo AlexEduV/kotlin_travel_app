@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -25,26 +26,34 @@ fun CoverFlowRow() {
     ) {
 
         //left card
-        CoverFlowItem(modifier = Modifier.align(Alignment.CenterStart))
+        CoverFlowItem(modifier = Modifier
+            .align(Alignment.CenterStart)
+            .offset(x = 40.dp)
+        )
 
         //right card
-        CoverFlowItem(modifier = Modifier.align(Alignment.CenterEnd))
+        CoverFlowItem(modifier = Modifier
+            .align(Alignment.CenterEnd)
+            .offset(x = (-40).dp)
+        )
 
         //center card on top
-        CoverFlowItem(modifier = Modifier.align(Alignment.Center))
+        CoverFlowItem(
+            modifier = Modifier
+                .align(Alignment.Center),
+            isCenter = true,
+            )
 
 
     }
 }
 
 @Composable
-fun CoverFlowItem(modifier: Modifier) {
+fun CoverFlowItem(modifier: Modifier, isCenter: Boolean = false) {
 
     Box(
         modifier = modifier
-            .height(120.dp)
-            .width(120.dp)
-            .offset(x = (0).dp)
+            .size(if (isCenter) 120.dp else 100.dp)
             .background(Color.Gray, RoundedCornerShape(12.dp))
             .border(1.dp, Color(0xfffafafa), RoundedCornerShape(12.dp))
     )
