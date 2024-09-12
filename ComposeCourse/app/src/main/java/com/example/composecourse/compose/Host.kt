@@ -27,10 +27,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.composecourse.R
+import com.example.composecourse.navigation.navigateToApartmentDetails
 
 @Composable
-fun HostCard() {
+fun HostCard(navHostController: NavHostController) {
 
     val photoScrollState = rememberScrollState()
 
@@ -69,13 +71,21 @@ fun HostCard() {
                 .horizontalScroll(photoScrollState)
         ) {
 
-            ApartmentPhotoItem(R.drawable.apartment_1)
+            ApartmentPhotoItem(R.drawable.apartment_1) {
+                navHostController.navigateToApartmentDetails()
+            }
 
-            ApartmentPhotoItem(R.drawable.apartment_2)
+            ApartmentPhotoItem(R.drawable.apartment_2) {
+                navHostController.navigateToApartmentDetails()
+            }
 
-            ApartmentPhotoItem(R.drawable.apartment_3)
+            ApartmentPhotoItem(R.drawable.apartment_3) {
+                navHostController.navigateToApartmentDetails()
+            }
 
-            ApartmentPhotoItem(R.drawable.apartment_4)
+            ApartmentPhotoItem(R.drawable.apartment_4) {
+                navHostController.navigateToApartmentDetails()
+            }
 
         }
 
@@ -111,7 +121,7 @@ fun HostInfoColumn(
 }
 
 @Composable
-fun ApartmentPhotoItem(resourceId: Int) {
+fun ApartmentPhotoItem(resourceId: Int, onClick: () -> Unit) {
 
     Box(modifier = Modifier
         .height(60.dp)
@@ -119,11 +129,7 @@ fun ApartmentPhotoItem(resourceId: Int) {
         .background(
             Color.Gray.copy(alpha = 0.9f),
             RoundedCornerShape(4.dp))
-        .clickable {
-
-            //todo: open apartment route
-
-        }
+        .clickable(onClick = { onClick() })
     ) {
         Image(
             painter = painterResource(id = resourceId),

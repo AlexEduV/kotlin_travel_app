@@ -25,6 +25,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.composecourse.R
 import com.example.composecourse.compose.BackButton
 import com.example.composecourse.compose.HostCard
@@ -32,7 +33,7 @@ import com.example.composecourse.compose.LocationMarker
 import com.example.composecourse.compose.SearchSelector
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(navHostController: NavHostController) {
 
     Box(
         modifier = Modifier
@@ -55,7 +56,7 @@ fun HomeScreen() {
 
             BackButton()
 
-            HostCard()
+            HostCard(navHostController = navHostController)
 
             Spacer(modifier = Modifier.weight(1f))
 

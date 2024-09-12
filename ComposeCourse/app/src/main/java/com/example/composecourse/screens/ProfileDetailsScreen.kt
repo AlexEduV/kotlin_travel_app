@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.composecourse.R
 import com.example.composecourse.compose.BackButton
 import com.example.composecourse.compose.CustomCard
@@ -25,7 +26,7 @@ import com.example.composecourse.compose.StatsElement
 import com.example.composecourse.compose.coralGreen
 
 @Composable
-fun ProfileDetailsScreen() {
+fun ProfileDetailsScreen(navHostController: NavHostController) {
 
     val scrollState = rememberScrollState()
 
