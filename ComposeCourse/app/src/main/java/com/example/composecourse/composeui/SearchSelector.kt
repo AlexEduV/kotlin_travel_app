@@ -158,7 +158,7 @@ fun LocationMarker(
             modifier = Modifier
                 .size(size)
                 .offset(x = offsetX, y = offsetY),
-            tint = Color.White.copy(alpha = 0.95f)
+            tint = Color.White,
         )
 
         ProfileImage(
