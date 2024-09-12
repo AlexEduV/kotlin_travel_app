@@ -151,6 +151,11 @@ class MainActivity : ComponentActivity() {
                             " or a base for outdoor adventures, this chalet promises an unparalleled experience in the heart" +
                             " of nature’s beauty.",
                     backgroundColor = Color.White,
+                    images = mapOf(
+                        R.drawable.canada_1 to "Canada 1",
+                        R.drawable.canada_2 to "Canada 2",
+                        R.drawable.canada_3 to "Canada 3",
+                    )
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -171,7 +176,13 @@ class MainActivity : ComponentActivity() {
                             " beauty of Norway. Escape the city buzz, yet remain just a short" +
                             " drive away from Oslo's rich cultural scene and historical landmarks," +
                             " making it a perfect mix of relaxation and exploration.",
-                    backgroundColor = Color(0xffecfafc)
+                    backgroundColor = Color(0xffecfafc),
+                    images = mapOf(
+                        R.drawable.norway_1 to "Norway 1",
+                        R.drawable.norway_2 to "Norway 2",
+                        R.drawable.norway_3 to "Norway 3",
+                    )
+
                 )
 
                 Spacer(modifier = Modifier.height(32.dp))

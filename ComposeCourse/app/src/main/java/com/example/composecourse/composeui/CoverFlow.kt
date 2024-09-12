@@ -1,5 +1,6 @@
 package com.example.composecourse.composeui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
@@ -14,10 +15,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CoverFlowRow() {
+fun CoverFlowRow(images: Map<Int, String>) {
 
     Box(
         modifier = Modifier
@@ -26,15 +28,21 @@ fun CoverFlowRow() {
     ) {
 
         //left card
-        CoverFlowItem(modifier = Modifier
-            .align(Alignment.CenterStart)
-            .offset(x = 40.dp)
+        CoverFlowItem(
+            modifier = Modifier
+                .align(Alignment.CenterStart)
+                .offset(x = 40.dp),
+            resource = images.keys.elementAt(0),
+            description = images.values.elementAt(0),
         )
 
         //right card
-        CoverFlowItem(modifier = Modifier
-            .align(Alignment.CenterEnd)
-            .offset(x = (-40).dp)
+        CoverFlowItem(
+            modifier = Modifier
+                .align(Alignment.CenterEnd)
+                .offset(x = (-40).dp),
+            resource = images.keys.elementAt(1),
+            description = images.values.elementAt(1),
         )
 
         //center card on top
@@ -42,19 +50,30 @@ fun CoverFlowRow() {
             modifier = Modifier
                 .align(Alignment.Center),
             isCenter = true,
-            )
-
+            resource = images.keys.elementAt(2),
+            description = images.values.elementAt(2),
+        )
 
     }
 }
 
 @Composable
-fun CoverFlowItem(modifier: Modifier, isCenter: Boolean = false) {
+fun CoverFlowItem(
+    modifier: Modifier,
+    isCenter: Boolean = false,
+    resource: Int,
+    description: String,
+    ) {
 
     Box(
         modifier = modifier
             .size(if (isCenter) 120.dp else 100.dp)
             .background(Color.Gray, RoundedCornerShape(12.dp))
             .border(1.dp, Color(0xfffafafa), RoundedCornerShape(12.dp))
-    )
+    ) {
+        Image(
+            painter = painterResource(id = resource),
+            contentDescription = description,
+            )
+    }
 }

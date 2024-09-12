@@ -40,7 +40,8 @@ fun CustomCard(
     location: String,
     datesStayed: String,
     content: String,
-    backgroundColor: Color
+    backgroundColor: Color,
+    images: Map<Int, String>
     ) {
 
     Card(
@@ -90,7 +91,7 @@ fun CustomCard(
             )
 
             //stack here
-            CoverFlowRow()
+            CoverFlowRow(images = images)
 
             Row(
                 horizontalArrangement = Arrangement.spacedBy(16.dp),
