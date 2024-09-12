@@ -3,6 +3,7 @@ package com.example.composecourse.composeui
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -26,6 +27,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
@@ -51,7 +53,7 @@ fun SearchSelector() {
         )
         .fillMaxWidth()
         .height(60.dp),
-        //horizontalArrangement = Arrangement.SpaceEvenly,
+        horizontalArrangement = Arrangement.Start,
     ) {
 
         DropdownMenuWithLabel(
@@ -61,7 +63,7 @@ fun SearchSelector() {
             onOptionSelected = {option -> adultsSelectedOption = option},
             options = adultsOptions,
             label = "Adults",
-            modifier = Modifier.weight(0.1f),
+            modifier = Modifier.width(120.dp),
         )
 
         DropdownMenuWithLabel(
@@ -71,7 +73,7 @@ fun SearchSelector() {
             onOptionSelected = {option -> bedroomSelectedOption = option},
             options = bedroomOptions,
             label = "Bedrooms",
-            modifier = Modifier.weight(0.3f),
+            modifier = Modifier.width(140.dp),
         )
 
         DropdownMenuWithLabel(
@@ -81,7 +83,7 @@ fun SearchSelector() {
             onOptionSelected = {option -> priceRangeSelectedOption = option},
             options = priceRangeOptions,
             label = "$",
-            modifier = Modifier.weight(0.5f),
+            modifier = Modifier.width(140.dp),
         )
 
     }
@@ -102,6 +104,7 @@ fun DropdownMenuWithLabel(
             onClick = { onExpandedChange(!expanded) },
             modifier = modifier
                 .fillMaxHeight(),
+            contentPadding = PaddingValues(0.dp),
             colors = ButtonDefaults.buttonColors().copy(
                 containerColor = Color.Transparent,
                 contentColor = coralGreen,
