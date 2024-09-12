@@ -1,4 +1,4 @@
-package com.example.composecourse.composeui
+package com.example.composecourse.compose
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
