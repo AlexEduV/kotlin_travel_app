@@ -2,6 +2,7 @@ package com.example.composecourse.composeui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -51,7 +52,12 @@ fun HostCard() {
             verticalAlignment = Alignment.CenterVertically
         ) {
 
-            ProfileImage(size = 60.dp, resourceId = R.drawable.owner_profile_1, modifier = Modifier)
+            ProfileImage(
+                size = 60.dp,
+                resourceId = R.drawable.owner_profile_1,
+                modifier = Modifier,
+                isVerified = true
+            )
 
             HostInfoColumn("Amanda Vespucci", 4)
 
@@ -114,6 +120,11 @@ fun ApartmentPhotoItem(resourceId: Int) {
         .background(
             Color.Gray.copy(alpha = 0.9f),
             RoundedCornerShape(4.dp))
+        .clickable {
+
+            //todo: open apartment route
+
+        }
     ) {
         Image(
             painter = painterResource(id = resourceId),

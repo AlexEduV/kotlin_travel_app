@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ComposeCourse</string>
+    <string name="title_activity_apartment">ApartmentActivity</string>
 </resources>
