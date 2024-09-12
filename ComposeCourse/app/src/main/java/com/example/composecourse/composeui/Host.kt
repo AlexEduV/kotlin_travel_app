@@ -20,10 +20,11 @@ import androidx.compose.ui.unit.sp
 import com.example.composecourse.R
 
 @Composable
-fun OwnerCard() {
+fun HostCard() {
 
     Column {
 
+        //host info row
         Row(
             modifier = Modifier
                 .background(
@@ -38,26 +39,42 @@ fun OwnerCard() {
 
             ProfileImage(size = 60.dp, resourceId = R.drawable.owner_profile_1)
 
-            Column {
-
-                Text(
-                    "Amanda Vespucci",
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.W600,
-                    lineHeight = 22.sp,
-                    color = coralGreen
-                )
-
-                Spacer(Modifier.height(2.dp))
-
-                Text(
-                    "4 Apartments  •  Verified Host",
-                    fontWeight = FontWeight.W400,
-                    lineHeight = 22.sp,
-                )
-
-            }
+            HostInfoColumn("Amanda Vespucci", 4)
 
         }
+
+        //apartments scroll view
+        Row {
+            
+        }
+
+
+    }
+}
+
+@Composable
+fun HostInfoColumn(
+    name: String,
+    apartments: Int,
+    ) {
+
+    Column {
+
+        Text(
+            name,
+            fontSize = 16.sp,
+            fontWeight = FontWeight.W600,
+            lineHeight = 22.sp,
+            color = coralGreen
+        )
+
+        Spacer(Modifier.height(2.dp))
+
+        Text(
+            "$apartments Apartments  • Verified Host",
+            fontWeight = FontWeight.W400,
+            lineHeight = 22.sp,
+        )
+
     }
 }
