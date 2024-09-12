@@ -126,10 +126,10 @@ fun ApartmentPhotoItem(resourceId: Int, onClick: () -> Unit) {
     Box(modifier = Modifier
         .height(60.dp)
         .width(100.dp)
-        .background(
-            Color.Gray.copy(alpha = 0.9f),
-            RoundedCornerShape(4.dp))
+        .clip(RoundedCornerShape(4.dp))
         .clickable(onClick = { onClick() })
+        .background(Color.Gray.copy(alpha = 0.9f)),
+
     ) {
         Image(
             painter = painterResource(id = resourceId),
