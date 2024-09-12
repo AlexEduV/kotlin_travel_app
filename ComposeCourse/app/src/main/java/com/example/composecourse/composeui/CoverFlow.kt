@@ -70,7 +70,7 @@ fun CoverFlowItem(
 
     Box(
         modifier = modifier
-            .size(if (isCenter) 120.dp else 100.dp)
+            .size(if (isCenter) 140.dp else 120.dp)
             .background(Color.Gray, RoundedCornerShape(12.dp))
             .border(1.dp, Color(0xfffafafa), RoundedCornerShape(12.dp))
             .clip(RoundedCornerShape(12.dp))

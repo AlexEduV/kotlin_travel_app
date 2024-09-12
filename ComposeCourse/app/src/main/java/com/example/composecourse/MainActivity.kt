@@ -153,8 +153,8 @@ class MainActivity : ComponentActivity() {
                     backgroundColor = Color.White,
                     images = mapOf(
                         R.drawable.canada_1 to "Canada 1",
-                        R.drawable.canada_2 to "Canada 2",
-                        R.drawable.canada_3 to "Canada 3",
+                        R.drawable.canada_3 to "Canada 2",
+                        R.drawable.canada_2 to "Canada 3",
                     )
                 )
 
