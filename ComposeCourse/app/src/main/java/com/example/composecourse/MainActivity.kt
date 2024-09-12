@@ -44,6 +44,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.composecourse.composeui.BackButton
 import com.example.composecourse.composeui.CardContent
 import com.example.composecourse.composeui.CardSubtitle
 import com.example.composecourse.composeui.CoverFlowRow
@@ -65,10 +66,7 @@ class MainActivity : ComponentActivity() {
 
                 Spacer(modifier = Modifier.height(16.dp))
                 
-                Icon(
-                    imageVector = Icons.AutoMirrored.Filled.KeyboardArrowLeft,
-                    contentDescription = "Back",
-                )
+                BackButton()
 
                 Spacer(modifier = Modifier.height(24.dp))
                 
