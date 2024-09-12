@@ -3,6 +3,7 @@ package com.example.composecourse.composeui
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -13,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -43,10 +45,15 @@ fun ProfileImage(size: Dp, resourceId: Int) {
             .size(size)
             .clip(CircleShape)
             .background(Color.Gray.copy(alpha = 0.3f))
+
     ) {
         Image(
             painter = painterResource(id = resourceId),
             contentDescription = "profile picture",
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop,
         )
     }
 }
+
+val coralGreen: Color = Color(0xff1d404c)

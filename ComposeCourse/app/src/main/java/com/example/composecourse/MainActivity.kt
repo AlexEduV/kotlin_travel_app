@@ -51,6 +51,7 @@ import com.example.composecourse.composeui.CoverFlowRow
 import com.example.composecourse.composeui.CustomCard
 import com.example.composecourse.composeui.ProfileImage
 import com.example.composecourse.composeui.StatsElement
+import com.example.composecourse.composeui.coralGreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,7 +80,7 @@ class MainActivity : ComponentActivity() {
                             "Stay Memories",
                             fontWeight = FontWeight.W600,
                             fontSize = 22.sp,
-                            color = Color(0xff1d404c),
+                            color = coralGreen,
                         )
 
                         Spacer(modifier = Modifier.height(8.dp))

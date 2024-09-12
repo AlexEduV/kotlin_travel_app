@@ -25,7 +25,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.composecourse.composeui.BackButton
+import com.example.composecourse.composeui.OwnerCard
 import com.example.composecourse.composeui.ProfileImage
+import com.example.composecourse.composeui.coralGreen
 
 class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,40 +55,7 @@ class HomeActivity : ComponentActivity() {
 
                     BackButton()
 
-                    Row(
-                        modifier = Modifier
-                            .background(
-                                Color.White.copy(alpha = 0.9f),
-                                RoundedCornerShape(12.dp)
-                            )
-                            .padding(all = 16.dp)
-                            .fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(16.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-
-                        ProfileImage(size = 60.dp, resourceId = R.drawable.profile_picture)
-
-                        Column {
-
-                            Text(
-                                "Haruka Takahashi",
-                                fontSize = 16.sp,
-                                fontWeight = FontWeight.W600,
-                                lineHeight = 22.sp,
-                            )
-
-                            Spacer(Modifier.height(2.dp))
-
-                            Text(
-                                "4 Apartments  •  Verified Host",
-                                fontWeight = FontWeight.W400,
-                                lineHeight = 22.sp,
-                            )
-
-                        }
-
-                    }
+                    OwnerCard()
 
                 }
             }
