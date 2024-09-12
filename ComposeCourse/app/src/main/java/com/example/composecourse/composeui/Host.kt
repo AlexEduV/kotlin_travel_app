@@ -1,13 +1,18 @@
 package com.example.composecourse.composeui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,17 +27,21 @@ import com.example.composecourse.R
 @Composable
 fun HostCard() {
 
-    Column {
+    val photoScrollState = rememberScrollState()
+
+    Column(
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+        modifier = Modifier
+            .background(
+                Color.White.copy(alpha = 0.9f),
+                RoundedCornerShape(12.dp)
+            )
+            .padding(vertical = 24.dp, horizontal = 16.dp)
+            .fillMaxWidth(),
+    ) {
 
         //host info row
         Row(
-            modifier = Modifier
-                .background(
-                    Color.White.copy(alpha = 0.9f),
-                    RoundedCornerShape(12.dp)
-                )
-                .padding(all = 16.dp)
-                .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -44,8 +53,20 @@ fun HostCard() {
         }
 
         //apartments scroll view
-        Row {
-            
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+            modifier = Modifier
+                .horizontalScroll(photoScrollState)
+        ) {
+
+            ApartmentPhotoItem()
+
+            ApartmentPhotoItem()
+
+            ApartmentPhotoItem()
+
+            ApartmentPhotoItem()
+
         }
 
 
@@ -77,4 +98,14 @@ fun HostInfoColumn(
         )
 
     }
+}
+
+@Composable
+fun ApartmentPhotoItem() {
+
+    Box(modifier = Modifier
+        .height(60.dp)
+        .width(100.dp)
+        .background(Color.Gray.copy(alpha = 0.9f), RoundedCornerShape(4.dp))
+    )
 }
