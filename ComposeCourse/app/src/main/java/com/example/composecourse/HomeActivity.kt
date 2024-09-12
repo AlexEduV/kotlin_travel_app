@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.sp
 import com.example.composecourse.composeui.BackButton
 import com.example.composecourse.composeui.CardSubtitle
 import com.example.composecourse.composeui.HostCard
+import com.example.composecourse.composeui.LocationMarker
 import com.example.composecourse.composeui.SearchSelector
 
 class HomeActivity : ComponentActivity() {
@@ -103,6 +104,8 @@ class HomeActivity : ComponentActivity() {
                     }
 
                 }
+
+                LocationMarker()
             }
 
         }

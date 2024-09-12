@@ -128,6 +128,7 @@ class MainActivity : ComponentActivity() {
                     ProfileImage(
                         size = 50.dp,
                         resourceId = R.drawable.profile_picture,
+                        modifier = Modifier,
                     )
                 }
 

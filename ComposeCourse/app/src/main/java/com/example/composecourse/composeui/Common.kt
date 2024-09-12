@@ -38,10 +38,10 @@ fun BackButton() {
 }
 
 @Composable
-fun ProfileImage(size: Dp, resourceId: Int) {
+fun ProfileImage(size: Dp, resourceId: Int, modifier: Modifier) {
 
     Box(
-        modifier = Modifier
+        modifier = modifier
             .size(size)
             .clip(CircleShape)
             .background(Color.Gray.copy(alpha = 0.3f))

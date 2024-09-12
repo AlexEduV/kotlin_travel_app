@@ -51,7 +51,7 @@ fun HostCard() {
             verticalAlignment = Alignment.CenterVertically
         ) {
 
-            ProfileImage(size = 60.dp, resourceId = R.drawable.owner_profile_1)
+            ProfileImage(size = 60.dp, resourceId = R.drawable.owner_profile_1, modifier = Modifier)
 
             HostInfoColumn("Amanda Vespucci", 4)
 
