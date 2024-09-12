@@ -1,6 +1,7 @@
 package com.example.composecourse.composeui
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -47,10 +48,11 @@ fun CustomCard(
             .copy(containerColor = backgroundColor),
         modifier = Modifier
             .graphicsLayer(
-                shadowElevation = 16.0f,
+                shadowElevation = 10.0f,
                 shape = RoundedCornerShape(16.dp),
                 clip = true,
-                )
+            )
+
     )
     {
 
