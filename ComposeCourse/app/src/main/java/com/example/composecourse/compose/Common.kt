@@ -1,5 +1,6 @@
 package com.example.composecourse.compose
 
+import android.content.ClipDescription
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -15,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
@@ -22,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import com.example.composecourse.R
 
 @Composable
-fun BackButton() {
+fun AppBarButton(imageVector: ImageVector, contentDescription: String) {
 
     Box(
         modifier = Modifier
@@ -31,11 +33,20 @@ fun BackButton() {
     ) {
 
         Icon(
-            imageVector = Icons.AutoMirrored.Filled.KeyboardArrowLeft,
-            contentDescription = "Back",
+            imageVector = imageVector,
+            contentDescription = contentDescription,
         )
     }
 
+}
+
+@Composable
+fun BackButton() {
+
+    AppBarButton(
+        imageVector = Icons.AutoMirrored.Filled.KeyboardArrowLeft,
+        contentDescription = "Back",
+    )
 }
 
 @Composable
