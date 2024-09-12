@@ -145,7 +145,8 @@ class MainActivity : ComponentActivity() {
                             " and high-end amenities to cater to every need, this chalet is more than just a home" +
                             " — it's a sanctuary where tranquility meets elegance. Whether you seek a peaceful escape" +
                             " or a base for outdoor adventures, this chalet promises an unparalleled experience in the heart" +
-                            " of nature’s beauty."
+                            " of nature’s beauty.",
+                    backgroundColor = Color.White,
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -165,7 +166,8 @@ class MainActivity : ComponentActivity() {
                             " it's an ideal haven to unwind, recharge, and experience the natural" +
                             " beauty of Norway. Escape the city buzz, yet remain just a short" +
                             " drive away from Oslo's rich cultural scene and historical landmarks," +
-                            " making it a perfect mix of relaxation and exploration."
+                            " making it a perfect mix of relaxation and exploration.",
+                    backgroundColor = Color(0xffecfafc)
                 )
 
                 Spacer(modifier = Modifier.height(32.dp))

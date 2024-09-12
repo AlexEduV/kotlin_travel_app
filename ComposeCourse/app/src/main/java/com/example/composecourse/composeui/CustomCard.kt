@@ -32,11 +32,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun CustomCard(title: String, location: String, datesStayed: String, content: String) {
+fun CustomCard(
+    title: String,
+    location: String,
+    datesStayed: String,
+    content: String,
+    backgroundColor: Color
+    ) {
 
     Card(
         colors = CardDefaults.cardColors()
-            .copy(containerColor = Color.White),
+            .copy(containerColor = backgroundColor),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
     )
     {
