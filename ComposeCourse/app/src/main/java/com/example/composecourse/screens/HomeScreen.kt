@@ -52,7 +52,9 @@ fun HomeScreen(navHostController: NavHostController) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
 
-            BackButton()
+            BackButton(
+                onClick = {}
+            )
 
             HostCard(navHostController = navHostController)
 

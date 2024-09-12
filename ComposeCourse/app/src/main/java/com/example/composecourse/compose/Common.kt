@@ -3,6 +3,7 @@ package com.example.composecourse.compose
 import android.content.ClipDescription
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -24,11 +25,13 @@ import androidx.compose.ui.unit.dp
 import com.example.composecourse.R
 
 @Composable
-fun AppBarButton(imageVector: ImageVector, contentDescription: String) {
+fun AppBarButton(imageVector: ImageVector, contentDescription: String, onClick: () -> Unit) {
 
     Box(
         modifier = Modifier
-            .background(Color.White.copy(alpha = 0.9f), shape = CircleShape)
+            .clip(CircleShape)
+            .clickable { onClick() }
+            .background(Color.White.copy(alpha = 0.9f))
             .padding(all = 8.dp)
     ) {
 
@@ -41,11 +44,12 @@ fun AppBarButton(imageVector: ImageVector, contentDescription: String) {
 }
 
 @Composable
-fun BackButton() {
+fun BackButton(onClick: () -> Unit) {
 
     AppBarButton(
         imageVector = Icons.AutoMirrored.Filled.KeyboardArrowLeft,
         contentDescription = "Back",
+        onClick = onClick
     )
 }
 

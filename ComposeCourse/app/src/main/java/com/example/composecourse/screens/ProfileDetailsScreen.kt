@@ -39,7 +39,9 @@ fun ProfileDetailsScreen(navHostController: NavHostController) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        BackButton()
+        BackButton(
+            onClick = {}
+        )
 
         Spacer(modifier = Modifier.height(24.dp))
 
