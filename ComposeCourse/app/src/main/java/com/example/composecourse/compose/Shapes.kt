@@ -16,9 +16,9 @@ class SemiCircleShape : Shape {
     ): Outline {
 
         val path = Path().apply {
-            moveTo(0f, size.height / 2)
+            moveTo(0f, size.height / 3)
             arcTo(
-                rect = Rect(0f, 0f, size.width, size.height),
+                rect = Rect(0f, 0f, size.width, size.height / 1.5f),
                 startAngleDegrees = 180f,
                 sweepAngleDegrees = 180f,
                 forceMoveTo = false
