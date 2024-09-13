@@ -88,3 +88,4 @@ fun ProfileImage(
 }
 
 val coralGreen: Color = Color(0xff1d404c)
+val secondaryGreen: Color = Color(0xff4f94a4)

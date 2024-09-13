@@ -13,9 +13,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -101,12 +105,8 @@ fun HostInfoColumn(
 
     Column {
 
-        Text(
-            name,
-            fontSize = 16.sp,
-            fontWeight = FontWeight.W600,
-            lineHeight = 22.sp,
-            color = coralGreen
+        HostName(
+            name = name
         )
 
         Spacer(Modifier.height(2.dp))
@@ -117,6 +117,40 @@ fun HostInfoColumn(
             lineHeight = 22.sp,
         )
 
+    }
+}
+
+@Composable
+fun HostName(name: String) {
+
+    Text(
+        name,
+        fontSize = 16.sp,
+        fontWeight = FontWeight.W600,
+        lineHeight = 22.sp,
+        color = coralGreen
+    )
+}
+
+@Composable
+fun HostRanking(
+    ranking: String,
+    color: Color = secondaryGreen
+) {
+
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Icon(
+            imageVector = Icons.Filled.Star,
+            "Star Icon",
+            tint = color,
+            modifier = Modifier.size(18.dp)
+        )
+
+        Text(ranking,
+            color = color,
+            fontWeight = FontWeight.W600,
+            fontSize = 16.sp
+        )
     }
 }
 

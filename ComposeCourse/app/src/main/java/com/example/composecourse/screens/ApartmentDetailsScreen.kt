@@ -1,7 +1,6 @@
 package com.example.composecourse.screens
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,8 +16,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.rounded.DateRange
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,16 +31,23 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.vector.VectorPainter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.composecourse.R
 import com.example.composecourse.compose.AppBarButton
 import com.example.composecourse.compose.BackButton
+import com.example.composecourse.compose.HostName
+import com.example.composecourse.compose.HostRanking
 import com.example.composecourse.compose.SemiCircleShape
+import com.example.composecourse.compose.coralGreen
+import com.example.composecourse.compose.secondaryGreen
 
 
 @Composable
@@ -49,7 +58,8 @@ fun ApartmentDetailsScreen(
 
     Column(modifier = Modifier
         .padding(all = 16.dp)
-        .fillMaxHeight()
+        .fillMaxHeight(),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
         Row(
@@ -99,6 +109,29 @@ fun ApartmentDetailsScreen(
             )
 
         }
+
+        Spacer(modifier = Modifier.height(44.dp))
+
+        Column(
+            verticalArrangement = Arrangement.spacedBy(4.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
+
+            HostName(name = "Amanda Vespucci")
+
+            HostRanking(ranking = "4.6")
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Text(
+            "Welcome to your next stay!",
+            color = Color.Gray,
+            fontWeight = FontWeight.W500,
+            fontSize = 16.sp,
+        )
+
+        
         
         
         

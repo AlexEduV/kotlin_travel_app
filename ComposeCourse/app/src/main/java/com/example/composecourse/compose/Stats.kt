@@ -20,7 +20,7 @@ fun StatsElement(value: String, title: String) {
             value,
             fontSize = 22.sp,
             fontWeight = FontWeight.ExtraBold,
-            color = Color(0xff4f94a4)
+            color = secondaryGreen
         )
 
         Spacer(modifier = Modifier.height(4.dp))
