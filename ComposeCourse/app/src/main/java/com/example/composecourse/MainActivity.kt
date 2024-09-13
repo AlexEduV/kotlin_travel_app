@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.compose.rememberNavController
 import com.example.composecourse.navigation.NavGraph
+import com.example.composecourse.ui.theme.ComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +13,6 @@ class MainActivity : ComponentActivity() {
         setContent {
 
             val navController = rememberNavController()
-
             NavGraph(navController = navController)
         }
     }
