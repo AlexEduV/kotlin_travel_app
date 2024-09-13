@@ -128,15 +128,18 @@ fun ApartmentDetailsScreen(
         Text(
             "Welcome to your next stay!",
             color = Color.Gray,
-            fontWeight = FontWeight.W500,
-            fontSize = 16.sp,
+            fontWeight = FontWeight.W600,
+            fontSize = 15.sp,
         )
 
         Spacer(modifier = Modifier.height(8.dp))
 
         ContentText(text = "I'm thrilled to have you here and hope you have a wonderful" +
                 " experience. If you need anything or have any questions during" +
-                " your time with me, please don't hesitate to reach out.")
+                " your time with me, please don't hesitate to reach out."
+        )
+
+        
 
 
         
