@@ -107,7 +107,10 @@ fun HomeScreen(navHostController: NavHostController) {
 
         }
 
-        LocationMarker(onClick = { isCardShown = true })
+        LocationMarker(
+            onClick = { isCardShown = true },
+            isProfileImageShown = !isCardShown
+        )
     }
 
 }

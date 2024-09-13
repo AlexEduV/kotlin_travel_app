@@ -148,6 +148,7 @@ fun LocationMarker(
     offsetX: Dp = 190.dp,
     offsetY: Dp = 340.dp,
     onClick: () -> Unit,
+    isProfileImageShown: Boolean
     ) {
 
     Box {
@@ -161,17 +162,17 @@ fun LocationMarker(
                 .clip(CircleShape)
                 .clickable { onClick() }
             ,
-
-
             tint = Color.White,
         )
 
-        ProfileImage(
-            size = size / 2,
-            resourceId = resourceId,
-            modifier = Modifier
-                .offset(x = offsetX + (size / 4), y = offsetY + (size / 8))
-        )
+        if (isProfileImageShown) {
+            ProfileImage(
+                size = size / 2,
+                resourceId = resourceId,
+                modifier = Modifier
+                    .offset(x = offsetX + (size / 4), y = offsetY + (size / 8))
+            )
+        }
 
     }
 
