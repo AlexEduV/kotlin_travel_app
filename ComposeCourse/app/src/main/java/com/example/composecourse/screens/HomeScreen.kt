@@ -32,6 +32,7 @@ import com.example.composecourse.compose.BackButton
 import com.example.composecourse.compose.HostCard
 import com.example.composecourse.compose.LocationMarker
 import com.example.composecourse.compose.SearchSelector
+import com.example.composecourse.navigation.navigateToProfileDetails
 
 @Composable
 fun HomeScreen(navHostController: NavHostController) {
@@ -58,7 +59,9 @@ fun HomeScreen(navHostController: NavHostController) {
         ) {
 
             BackButton(
-                onClick = {}
+                onClick = {
+                    navHostController.navigateToProfileDetails()
+                }
             )
 
             if (isCardShown) {
