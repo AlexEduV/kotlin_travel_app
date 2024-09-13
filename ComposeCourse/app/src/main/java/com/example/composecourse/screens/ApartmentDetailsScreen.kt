@@ -91,10 +91,10 @@ fun ApartmentDetailsScreen(
                 contentDescription = "Host Picture Centered",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .size(80.dp)
+                    .size(100.dp)
                     .offset(y = 40.dp)
                     .align(Alignment.BottomCenter)
-                    .border(width = 5.dp, MaterialTheme.colorScheme.background, CircleShape)
+                    .border(width = 8.dp, MaterialTheme.colorScheme.background, CircleShape)
                     .clip(CircleShape)
             )
 
