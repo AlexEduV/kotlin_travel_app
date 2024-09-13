@@ -14,7 +14,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.DateRange
 import androidx.compose.material3.MaterialTheme
@@ -27,6 +30,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.composecourse.R
+import com.example.composecourse.compose.ApartmentLargePhotoItem
 import com.example.composecourse.compose.AppBarButton
 import com.example.composecourse.compose.BackButton
 import com.example.composecourse.compose.ContentText
@@ -43,11 +47,15 @@ fun ApartmentDetailsScreen(
     itemId: Int?
     ) {
 
+    val scrollState = rememberScrollState()
+
     Column(modifier = Modifier
-        .padding(all = 16.dp)
-        .fillMaxHeight(),
+        .padding(start = 16.dp, end = 16.dp)
+        .verticalScroll(scrollState),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+
+        Spacer(modifier = Modifier.height(16.dp))
 
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -70,7 +78,7 @@ fun ApartmentDetailsScreen(
 
         Box(modifier = Modifier
             .fillMaxWidth()
-            .fillMaxHeight(0.55f)
+            .height(400.dp)
             .padding(horizontal = 16.dp)
         ) {
 
@@ -131,7 +139,31 @@ fun ApartmentDetailsScreen(
             SubTitleText("Get Passcode", color = actionBlue)
         }
 
-        
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Column(
+            modifier = Modifier.padding(bottom = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(24.dp),
+            ) {
+
+            ApartmentLargePhotoItem(
+                resourceId = R.drawable.apartment_2,
+                contentDescription = "Apartment Photo 2"
+            )
+
+            ApartmentLargePhotoItem(
+                resourceId = R.drawable.apartment_3,
+                contentDescription = "Apartment Photo 3"
+            )
+
+
+            ApartmentLargePhotoItem(
+                resourceId = R.drawable.apartment_4,
+                contentDescription = "Apartment Photo 4"
+            )
+        }
+
+        //'Book Now' button
 
 
         
