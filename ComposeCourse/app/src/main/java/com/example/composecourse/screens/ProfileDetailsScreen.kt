@@ -25,6 +25,7 @@ import com.example.composecourse.compose.ContentText
 import com.example.composecourse.compose.CustomCard
 import com.example.composecourse.compose.ProfileImage
 import com.example.composecourse.compose.StatsElement
+import com.example.composecourse.compose.SubTitleText
 import com.example.composecourse.compose.coralGreen
 
 @Composable
@@ -82,15 +83,7 @@ fun ProfileDetailsScreen(navHostController: NavHostController) {
 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                Row {
-
-                    Text(
-                        "Recent Stays  •  8",
-                        fontWeight = FontWeight.W500,
-                        fontSize = 16.sp,
-                        color = Color.Gray,
-                    )
-                }
+                SubTitleText(text = "Recent Stays  •  8")
 
             }
 

@@ -113,5 +113,17 @@ fun ContentText(
     )
 }
 
+@Composable
+fun SubTitleText(text: String, color: Color = Color.Gray) {
+
+    Text(
+        text,
+        fontWeight = FontWeight.W600,
+        fontSize = 15.sp,
+        color = color,
+    )
+}
+
 val coralGreen: Color = Color(0xff1d404c)
 val secondaryGreen: Color = Color(0xff4f94a4)
+val actionBlue: Color = Color(0xff576da5)

@@ -101,13 +101,13 @@ fun CustomCard(
                 horizontalArrangement = Arrangement.spacedBy(16.dp),
                 modifier = Modifier.height(45.dp)) {
 
-                val buttonColor = Color(0xff576da5)
-
                 Button(
                     onClick = {},
                     shape = CircleShape,
                     modifier = Modifier.weight(1f),
-                    colors = ButtonDefaults.buttonColors().copy(containerColor = buttonColor)
+                    colors = ButtonDefaults.buttonColors().copy(
+                        containerColor = actionBlue
+                    )
                 ) {
                     Text("Schedule Again")
                 }
@@ -115,10 +115,13 @@ fun CustomCard(
                 Button(
                     onClick = {},
                     shape = CircleShape,
-                    border = BorderStroke(width = 1.dp, color = buttonColor),
+                    border = BorderStroke(
+                        width = 1.dp,
+                        color = actionBlue
+                    ),
                     colors = ButtonDefaults.buttonColors().copy(
                         containerColor = backgroundColor,
-                        contentColor = buttonColor,
+                        contentColor = actionBlue,
                         ),
                     modifier = Modifier
                         .fillMaxHeight()
@@ -129,7 +132,7 @@ fun CustomCard(
                         painter = painterResource(
                             id = R.drawable.forward_arrow_100),
                             contentDescription = "Forward Icon",
-                            colorFilter = ColorFilter.tint(buttonColor)
+                            colorFilter = ColorFilter.tint(actionBlue)
                     )
                 }
 

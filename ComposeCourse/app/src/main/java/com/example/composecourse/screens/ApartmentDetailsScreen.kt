@@ -47,6 +47,8 @@ import com.example.composecourse.compose.ContentText
 import com.example.composecourse.compose.HostName
 import com.example.composecourse.compose.HostRanking
 import com.example.composecourse.compose.SemiCircleShape
+import com.example.composecourse.compose.SubTitleText
+import com.example.composecourse.compose.actionBlue
 import com.example.composecourse.compose.coralGreen
 import com.example.composecourse.compose.secondaryGreen
 
@@ -125,12 +127,7 @@ fun ApartmentDetailsScreen(
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        Text(
-            "Welcome to your next stay!",
-            color = Color.Gray,
-            fontWeight = FontWeight.W600,
-            fontSize = 15.sp,
-        )
+        SubTitleText(text = "Welcome to your next stay!")
 
         Spacer(modifier = Modifier.height(8.dp))
 
@@ -139,7 +136,16 @@ fun ApartmentDetailsScreen(
                 " your time with me, please don't hesitate to reach out."
         )
 
-        
+        Spacer(modifier = Modifier.height(32.dp))
+
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            SubTitleText(text = "Self Check-in Guide")
+
+            SubTitleText("Get Passcode", color = actionBlue)
+        }
 
 
         
