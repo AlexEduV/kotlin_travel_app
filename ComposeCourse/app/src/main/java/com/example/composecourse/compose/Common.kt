@@ -12,6 +12,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,9 +21,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.max
+import androidx.compose.ui.unit.sp
 import com.example.composecourse.R
+import org.w3c.dom.Text
 
 @Composable
 fun AppBarButton(imageVector: ImageVector, contentDescription: String, onClick: () -> Unit) {
@@ -85,6 +92,25 @@ fun ProfileImage(
             )
         }
     }
+}
+
+@Composable
+fun ContentText(
+    text: String,
+    fontSize: TextUnit = 15.sp,
+    lineHeight: TextUnit = 22.sp,
+    maxLines: Int = Int.MAX_VALUE,
+    textOverflow: TextOverflow = TextOverflow.Ellipsis
+) {
+    Text(
+        text,
+        fontSize = fontSize,
+        fontWeight = FontWeight.W500,
+        lineHeight = lineHeight,
+        color = Color.Gray.copy(alpha = 0.9f),
+        maxLines = maxLines,
+        overflow = textOverflow
+    )
 }
 
 val coralGreen: Color = Color(0xff1d404c)

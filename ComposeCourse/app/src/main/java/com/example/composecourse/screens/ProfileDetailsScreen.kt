@@ -21,6 +21,7 @@ import androidx.navigation.NavHostController
 import com.example.composecourse.R
 import com.example.composecourse.compose.AppBarButton
 import com.example.composecourse.compose.BackButton
+import com.example.composecourse.compose.ContentText
 import com.example.composecourse.compose.CustomCard
 import com.example.composecourse.compose.ProfileImage
 import com.example.composecourse.compose.StatsElement
@@ -58,13 +59,10 @@ fun ProfileDetailsScreen(navHostController: NavHostController) {
 
                 Spacer(modifier = Modifier.height(8.dp))
 
-                Text(
-                    "Explore your past adventures and relive your favorite moments. " +
-                            "View details of all your previous stays.",
-                    fontSize = 15.sp,
-                    fontWeight = FontWeight.W500,
-                    lineHeight = 22.sp,
-                    color = Color.Gray.copy(alpha = 0.9f)
+                ContentText(
+                    text = "Explore your past adventures and relive your" +
+                            " favorite moments. View details of all " +
+                            "your previous stays.",
                 )
 
                 Spacer(modifier = Modifier.height(32.dp))

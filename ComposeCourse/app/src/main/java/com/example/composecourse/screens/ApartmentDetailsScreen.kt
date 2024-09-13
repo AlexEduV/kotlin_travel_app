@@ -43,6 +43,7 @@ import androidx.navigation.NavHostController
 import com.example.composecourse.R
 import com.example.composecourse.compose.AppBarButton
 import com.example.composecourse.compose.BackButton
+import com.example.composecourse.compose.ContentText
 import com.example.composecourse.compose.HostName
 import com.example.composecourse.compose.HostRanking
 import com.example.composecourse.compose.SemiCircleShape
@@ -122,7 +123,7 @@ fun ApartmentDetailsScreen(
             HostRanking(ranking = "4.6")
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(10.dp))
 
         Text(
             "Welcome to your next stay!",
@@ -131,7 +132,13 @@ fun ApartmentDetailsScreen(
             fontSize = 16.sp,
         )
 
-        
+        Spacer(modifier = Modifier.height(8.dp))
+
+        ContentText(text = "I'm thrilled to have you here and hope you have a wonderful" +
+                " experience. If you need anything or have any questions during" +
+                " your time with me, please don't hesitate to reach out.")
+
+
         
         
         

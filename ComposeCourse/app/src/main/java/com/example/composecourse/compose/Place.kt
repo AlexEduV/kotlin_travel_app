@@ -30,7 +30,6 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -88,8 +87,11 @@ fun CustomCard(
 
             }
 
-            CardContent(
-                value = content
+            ContentText(
+                text = content,
+                fontSize = 15.sp,
+                lineHeight = 20.sp,
+                maxLines = 3,
             )
 
             //stack here
@@ -146,21 +148,6 @@ fun CardSubtitle(value: String, fontSize: TextUnit = 16.sp) {
         value,
         color = Color.Gray,
         fontSize = fontSize,
-    )
-
-}
-
-@Composable
-fun CardContent(value: String, fontSize: TextUnit = 15.sp) {
-
-    Text(
-        value,
-        color = Color.Gray,
-        fontSize = fontSize,
-        maxLines = 3,
-        overflow = TextOverflow.Ellipsis,
-        lineHeight = 20.sp,
-        fontWeight = FontWeight.W500,
     )
 
 }
