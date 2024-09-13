@@ -123,7 +123,3 @@ fun SubTitleText(text: String, color: Color = Color.Gray) {
         color = color,
     )
 }
-
-val coralGreen: Color = Color(0xff1d404c)
-val secondaryGreen: Color = Color(0xff4f94a4)
-val actionBlue: Color = Color(0xff576da5)

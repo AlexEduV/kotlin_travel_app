@@ -34,6 +34,8 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.composecourse.R
+import com.example.composecourse.ui.theme.actionBlue
+import com.example.composecourse.ui.theme.coralGreen
 
 @Composable
 fun CustomCard(

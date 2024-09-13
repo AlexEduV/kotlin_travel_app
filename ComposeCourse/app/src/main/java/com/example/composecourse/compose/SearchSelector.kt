@@ -34,6 +34,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.composecourse.R
+import com.example.composecourse.ui.theme.coralGreen
 
 @Composable
 fun SearchSelector() {

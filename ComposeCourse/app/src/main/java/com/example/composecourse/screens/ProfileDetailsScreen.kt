@@ -26,7 +26,7 @@ import com.example.composecourse.compose.CustomCard
 import com.example.composecourse.compose.ProfileImage
 import com.example.composecourse.compose.StatsElement
 import com.example.composecourse.compose.SubTitleText
-import com.example.composecourse.compose.coralGreen
+import com.example.composecourse.ui.theme.coralGreen
 
 @Composable
 fun ProfileDetailsScreen(navHostController: NavHostController) {

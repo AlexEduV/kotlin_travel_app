@@ -36,7 +36,7 @@ import com.example.composecourse.compose.HostName
 import com.example.composecourse.compose.HostRanking
 import com.example.composecourse.compose.SemiCircleShape
 import com.example.composecourse.compose.SubTitleText
-import com.example.composecourse.compose.actionBlue
+import com.example.composecourse.ui.theme.actionBlue
 
 
 @Composable

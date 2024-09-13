@@ -34,6 +34,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.composecourse.R
 import com.example.composecourse.navigation.navigateToApartmentDetails
+import com.example.composecourse.ui.theme.coralGreen
+import com.example.composecourse.ui.theme.secondaryGreen
 
 @Composable
 fun HostCard(navController: NavHostController) {
