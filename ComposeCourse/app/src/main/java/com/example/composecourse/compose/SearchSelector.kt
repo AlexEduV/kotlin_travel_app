@@ -1,6 +1,7 @@
 package com.example.composecourse.compose
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -11,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -27,6 +29,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -144,6 +147,7 @@ fun LocationMarker(
     resourceId: Int = R.drawable.owner_profile_1,
     offsetX: Dp = 190.dp,
     offsetY: Dp = 340.dp,
+    onClick: () -> Unit,
     ) {
 
     Box {
@@ -152,7 +156,13 @@ fun LocationMarker(
             contentDescription = "Map Marker",
             modifier = Modifier
                 .size(size)
-                .offset(x = offsetX, y = offsetY),
+                .offset(x = offsetX, y = offsetY)
+                .background(Color.Transparent)
+                .clip(CircleShape)
+                .clickable { onClick() }
+            ,
+
+
             tint = Color.White,
         )
 

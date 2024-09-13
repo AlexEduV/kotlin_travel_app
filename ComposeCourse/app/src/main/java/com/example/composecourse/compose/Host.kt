@@ -36,7 +36,7 @@ import com.example.composecourse.R
 import com.example.composecourse.navigation.navigateToApartmentDetails
 
 @Composable
-fun HostCard(navHostController: NavHostController) {
+fun HostCard(navController: NavHostController) {
 
     val photoScrollState = rememberScrollState()
 
@@ -76,19 +76,19 @@ fun HostCard(navHostController: NavHostController) {
         ) {
 
             ApartmentPhotoItem(R.drawable.apartment_1) {
-                navHostController.navigateToApartmentDetails(R.drawable.apartment_1)
+                navController.navigateToApartmentDetails(R.drawable.apartment_1)
             }
 
             ApartmentPhotoItem(R.drawable.apartment_2) {
-                navHostController.navigateToApartmentDetails(R.drawable.apartment_2)
+                navController.navigateToApartmentDetails(R.drawable.apartment_2)
             }
 
             ApartmentPhotoItem(R.drawable.apartment_3) {
-                navHostController.navigateToApartmentDetails(R.drawable.apartment_3)
+                navController.navigateToApartmentDetails(R.drawable.apartment_3)
             }
 
             ApartmentPhotoItem(R.drawable.apartment_4) {
-                navHostController.navigateToApartmentDetails(R.drawable.apartment_4)
+                navController.navigateToApartmentDetails(R.drawable.apartment_4)
             }
 
         }

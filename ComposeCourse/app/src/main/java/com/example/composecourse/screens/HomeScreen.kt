@@ -14,6 +14,10 @@ import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -24,7 +28,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.composecourse.R
-import com.example.composecourse.compose.AppBarButton
 import com.example.composecourse.compose.BackButton
 import com.example.composecourse.compose.HostCard
 import com.example.composecourse.compose.LocationMarker
@@ -32,6 +35,8 @@ import com.example.composecourse.compose.SearchSelector
 
 @Composable
 fun HomeScreen(navHostController: NavHostController) {
+
+    var isCardShown by remember { mutableStateOf(false) }
 
     Box(
         modifier = Modifier
@@ -56,7 +61,9 @@ fun HomeScreen(navHostController: NavHostController) {
                 onClick = {}
             )
 
-            HostCard(navHostController = navHostController)
+            if (isCardShown) {
+                HostCard(navController = navHostController)
+            }
 
             Spacer(modifier = Modifier.weight(1f))
 
@@ -100,7 +107,7 @@ fun HomeScreen(navHostController: NavHostController) {
 
         }
 
-        LocationMarker()
+        LocationMarker(onClick = { isCardShown = true })
     }
 
 }
