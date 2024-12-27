@@ -1,10 +1,11 @@
-# compose_travel_app
-A Kotlin Android Mobile Travel App, used for studying JetPack Compose
+# kotlin_travel_app
+A Kotlin Android Mobile Travel App, used for practicing JetPack Compose
 
 ## Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Architecture](#architecture)
+- [Links](#links)
 
 ## Features
 - a beautiful custom UI, based on a Dribble Design, using custom fonts and downloaded images
@@ -22,3 +23,6 @@ This project follows a **Clean Architecture** structure with the following layer
 - `navigation`: Navigation logic.
 - `screens`: UI for full pages.
 - `ui`: Theme for the project.
+
+## Links
+The final result of the project is available on [Behance](https://www.behance.net/gallery/207827711/Android-Booking-Rentals-App)
